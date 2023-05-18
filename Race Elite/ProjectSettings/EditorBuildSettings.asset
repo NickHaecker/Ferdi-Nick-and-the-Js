@@ -4,8 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OnLoad.unity
+    guid: 5a26e40c53889684d89efa663053b432
+  - enabled: 1
+    path: Assets/Scenes/Spectator.unity
+    guid: 2f271f20e7993df4886705baaf856476
+  - enabled: 1
+    path: Assets/Scenes/Player.unity
+    guid: 2a54568aaedfe834eb25755fd2d62437
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 57618e8aafecd5a43b2846c96aac16de,
+      type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 89a6d18d3df8d3e4fa917b0f9a963bc0,
