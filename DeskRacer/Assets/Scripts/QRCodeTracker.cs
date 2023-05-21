@@ -51,6 +51,8 @@ public class QRCodeTracker : MonoBehaviour
                 GameObject spawnedObject = Instantiate(_prefab, trackedImage.transform.position, _prefab.transform.rotation, _groundController.transform);
                 Debug.Log(spawnedObject.name);
 
+
+
                 // Optional: Füge weitere Logik oder Komponenten zum gespawnten GameObject hinzu
             }
         }
