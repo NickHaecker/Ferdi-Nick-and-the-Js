@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.htc.upm.wave.essence": {
+      "version": "5.2.1-r.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.htc.upm.wave.xrsdk": "5.2.1-r.1",
+        "com.htc.upm.wave.native": "5.2.1-r.1"
+      },
+      "url": "https://npm-registry.vive.com"
+    },
     "com.htc.upm.wave.native": {
       "version": "5.2.1-r.1",
       "depth": 0,
@@ -64,6 +74,15 @@
         "com.unity.performance.profile-analyzer": "1.2.2",
         "com.unity.test-framework": "1.1.31",
         "com.unity.testtools.codecoverage": "1.2.2"
+      }
+    },
+    "com.unity.feature.vr": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.xr.oculus": "3.3.0",
+        "com.unity.xr.openxr": "1.7.0"
       }
     },
     "com.unity.ide.rider": {
@@ -291,6 +310,15 @@
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.oculus": {
+      "version": "3.3.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.2.0"
       },
       "url": "https://packages.unity.com"
     },

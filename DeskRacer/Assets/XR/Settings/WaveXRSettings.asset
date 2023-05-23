@@ -19,7 +19,7 @@ MonoBehaviour:
   adaptiveQualityMode: 2
   AQ_SendQualityEvent: 1
   AQ_AutoFoveation: 1
-  useAQDynamicResolution: 0
+  useAQDynamicResolution: 1
   DR_DefaultIndex: 0
   DR_TextSize: 20
   DR_ResolutionScaleList:
@@ -51,11 +51,11 @@ MonoBehaviour:
   displayGamutPreferences: 000000000100000002000000
   enableAutoFallbackForMultiLayer: 1
   allowSpectatorCamera: 0
-  EnableTracker: 0
-  EnableNaturalHand: 0
+  EnableTracker: 1
+  EnableNaturalHand: 1
   EnableElectronicHand: 0
-  EnableEyeTracking: 0
-  EnableEyeExpression: 0
-  EnableLipExpression: 0
-  EnableScenePerception: 0
-  EnableSceneMesh: 0
+  EnableEyeTracking: 1
+  EnableEyeExpression: 1
+  EnableLipExpression: 1
+  EnableScenePerception: 1
+  EnableSceneMesh: 1
