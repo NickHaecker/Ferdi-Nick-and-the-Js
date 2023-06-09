@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,7 +164,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 221351087}
-  - component: {fileID: 221351088}
   m_Layer: 0
   m_Name: ----Controller----
   m_TagString: Untagged
@@ -189,19 +188,6 @@ Transform:
   m_Father: {fileID: 604177858}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &221351088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221351086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb8c014c624a074cbc4b7a27f1a9a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackingOrigin: {fileID: 0}
 --- !u!1 &364268447
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 364268450}
-  _ip: 141.28.130.159
+  _ip: 192.168.178.87
 --- !u!1 &604177856
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +329,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604177856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55f0e00b7cf91314e95b82977fbe0ba4, type: 3}
   m_Name: 
@@ -379,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc663bc9fdeb7d749864fb6a3abf1914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildType: {fileID: 11400000, guid: 7cf35e6a8ac84fa4c894d7d38ec1d8be, type: 2}
+  BuildType: {fileID: 11400000, guid: 7fac80332dfd04f49b445c759eb2002e, type: 2}
 --- !u!1 &714212741
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,8 +730,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1951319124}
-  - component: {fileID: 1951319126}
-  - component: {fileID: 1951319125}
   m_Layer: 0
   m_Name: ScenePerception
   m_TagString: Untagged
@@ -768,53 +752,3 @@ Transform:
   m_Father: {fileID: 221351087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1951319125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951319123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed699d6a4686394b95f25e3fbf7d385, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scenePerceptionHelper:
-    scenePerceptionManager: {fileID: 1951319126}
-    currentPerceptionTarget: 2
-  passThroughHelper:
-    RoomPanelMeshRenderers:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    DemoRoomMaterialOpaque: {fileID: 2100000, guid: 5ed089f3573c9f44fa380e9e6ae9f193,
-      type: 2}
-    DemoRoomMaterialTransparent: {fileID: 2100000, guid: c8035e4f8de47e14fbb2b9f6cd338b50,
-      type: 2}
-    hmd: {fileID: 0}
-  anchorPrefab: {fileID: 6137973343519671895, guid: b727ac42c429ced43a68ab619e714014,
-    type: 3}
-  anchorDisplayPrefab: {fileID: 6137973343519671895, guid: 0c87a5379eca0c642a8a804630e46fca,
-    type: 3}
-  GeneratedMeshMaterialTranslucent: {fileID: 2100000, guid: b0e2136222c18364894daabc3a3dd31d,
-    type: 2}
-  GeneratedMeshMaterialWireframe: {fileID: 2100000, guid: 4c07f320866ca5448a4f57d518c84842,
-    type: 2}
-  leftController: {fileID: 0}
-  rightController: {fileID: 0}
---- !u!114 &1951319126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951319123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb8c014c624a074cbc4b7a27f1a9a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trackingOrigin: {fileID: 0}
