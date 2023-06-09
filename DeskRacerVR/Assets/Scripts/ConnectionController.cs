@@ -6,7 +6,7 @@ using Mirror;
 public class ConnectionController : MonoBehaviour
 {
     [SerializeField]
-    private NetworkManager networkManager;
+    private NetworkManager _networkManager;
     [SerializeField]
     private string _ip = "141.28.130.159";
     [SerializeField]
@@ -14,25 +14,33 @@ public class ConnectionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Connect());
+        _networkManager.networkAddress = _ip;
+        if (SceneController.Instance.BuildType.type == EBuildType.SERVER)
+        {
+            _networkManager.StartServer();
+        }
+        else
+        {
+            _networkManager.StartClient();
+        }
     }
 
     IEnumerator Connect()
     {
         yield return new WaitForSeconds(5);
-        if(SceneController.Instance.BuildType.type == EBuildType.SERVER)
+        if (SceneController.Instance.BuildType.type == EBuildType.SERVER)
         {
-            networkManager.StartServer();
+            _networkManager.StartServer();
         }
         else
         {
-            networkManager.OnClientConnect();
+            _networkManager.OnClientConnect();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
