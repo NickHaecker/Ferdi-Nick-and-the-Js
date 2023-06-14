@@ -15,7 +15,7 @@ public static class SceneMeshPermissionHelper
 
 	public static void RequestSceneMeshPermission()
 	{
-		Log.e(LOG_TAG, "Request Scene Mesh Permission");
+		Log.d(LOG_TAG, "Request Scene Mesh Permission");
 		string[] permArray = {
 			   scenePerceptionPermissionString
 			};
@@ -36,6 +36,4 @@ public static class SceneMeshPermissionHelper
 			}
 		}
 	}
-
-	
 }

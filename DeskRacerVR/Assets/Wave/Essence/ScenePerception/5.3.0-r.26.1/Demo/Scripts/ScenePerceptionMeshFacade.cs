@@ -44,7 +44,7 @@ namespace Wave.Essence.ScenePerception.Sample
 					}
 				}
 
-				Log.e(LOG_TAG , "UpdateScenePerceptionMesh: Perception state not complete, cannot generate mesh.");
+				Log.e(LOG_TAG, "UpdateScenePerceptionMesh: Perception state not complete, cannot generate mesh.");
 				return;
             }
 
