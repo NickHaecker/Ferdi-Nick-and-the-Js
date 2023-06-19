@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4720280648544235812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3628915490920215080}
+  - component: {fileID: 3883235350604176616}
+  m_Layer: 0
+  m_Name: ScenePerception
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3628915490920215080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720280648544235812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3949526466185985149}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3883235350604176616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720280648544235812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb8c014c624a074cbc4b7a27f1a9a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackingOrigin: {fileID: 3949526466185985150}
 --- !u!1 &5800756368109898129
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
+  syncDirection: 1
   syncMode: 0
   syncInterval: 0
   target: {fileID: 3949526466185985149}
@@ -269,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
+  syncDirection: 1
   syncMode: 0
   syncInterval: 0
   target: {fileID: 2402435929100847795}
@@ -307,6 +352,20 @@ MonoBehaviour:
   _cam: {fileID: 3949526465987357306}
   _leftController: {fileID: 3949526465498738697}
   _rightController: {fileID: 3949526467177562645}
+  _track: {fileID: 0}
+  _trackPrefab: {fileID: 4063936311491338721, guid: d60f800c02649674fbcbb2791ed2a897,
+    type: 3}
+  _trackDisplayPrrefab: {fileID: 8009028750535909174, guid: f7c749e14dd0b9e4cacaa3d243e84b51,
+    type: 3}
+  _anchorDisplayRight: {fileID: 0}
+  _scenePerceptionHelper:
+    scenePerceptionManager: {fileID: 3883235350604176616}
+    currentPerceptionTarget: 1
+  _generatedMeshMaterialTranslucent: {fileID: 2100000, guid: 2bae3a96c5eb6864494115957580d1f1,
+    type: 2}
+  _generatedMeshMaterialWireframe: {fileID: 2100000, guid: c2ac22caf7043e64b8b8cd21d7cdba34,
+    type: 2}
+  _hideMeshAndAnchors: 0
 --- !u!114 &1957535611177651352
 MonoBehaviour:
   m_ObjectHideFlags: 0
