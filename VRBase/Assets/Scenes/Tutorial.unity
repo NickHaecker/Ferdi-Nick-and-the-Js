@@ -248,7 +248,7 @@ PrefabInstance:
     - target: {fileID: 7071513949579546470, guid: 2a17ca96e32eb9342a88edb12fe53ebf,
         type: 3}
       propertyPath: m_Name
-      value: bowling pins+ball Variant
+      value: bowling pins+ball
       objectReference: {fileID: 0}
     - target: {fileID: 7595532792190522844, guid: 2a17ca96e32eb9342a88edb12fe53ebf,
         type: 3}
@@ -519,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 1229304406175605948, guid: 254b7122f5039a24f81b4cab0196360e,
         type: 3}
       propertyPath: m_Name
-      value: bowling alley Variant
+      value: bowling alley
       objectReference: {fileID: 0}
     - target: {fileID: 1892793275851161094, guid: 254b7122f5039a24f81b4cab0196360e,
         type: 3}
