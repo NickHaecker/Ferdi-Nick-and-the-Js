@@ -6,7 +6,7 @@ public class PullMeasurer : XRBaseInteractable
     [SerializeField] private Transform start;
     [SerializeField] private Transform end;
 
-    public float PullAmount { get; private set; } = 0.0f;
+    [SerializeField] public float PullAmount = 0.0f;
 
     public Vector3 PullPosition => Vector3.Lerp(start.position, end.position, PullAmount);
 
