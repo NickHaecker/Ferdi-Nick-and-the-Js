@@ -303,7 +303,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd3d7b773a4be3c4794db5fd05531051,
         type: 3}
       propertyPath: m_Name
-      value: bowling lane 1
+      value: bowling lane
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd3d7b773a4be3c4794db5fd05531051, type: 3}
