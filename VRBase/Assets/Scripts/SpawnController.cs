@@ -33,9 +33,6 @@ public class SpawnController : MonoBehaviour
 
     private void ReSpawn()
     {
-        Vector2 randomCircle = UnityEngine.Random.insideUnitCircle.normalized * Mathf.Sqrt(UnityEngine.Random.Range(0f, 1f)) * 3;
-        Vector3 randomPosition = new Vector3(randomCircle.x, 0, randomCircle.y) + _spawner.transform.position;
-
-        _spawnableObject.transform.position = randomPosition;
+        _spawnableObject.transform.position = _spawner.transform.position;
     }
 }
