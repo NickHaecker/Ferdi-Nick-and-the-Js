@@ -136,7 +136,7 @@ public class Elevator : MonoBehaviour
             {
                 foreach (GameObject item in _rewardItems)
                 {
-                    if (r.Item.Equals(item))
+                    if (r.Item.name == item.name)
                     {
                         item.SetActive(true);
                     }

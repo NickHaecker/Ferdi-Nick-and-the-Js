@@ -60,19 +60,17 @@ public abstract class MiniGameController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        PassReward();
-
         EndScene();
     }
 
     private void EndScene()
     {
-        
-
         Elevator.Instance.RemoveMinigameController(this);
     }
     public void RemoveListener()
     {
+        PassReward();
+
         StartScene -= OnSceneStarter;
         CloseScene -= OnSceneCloser;
     }
