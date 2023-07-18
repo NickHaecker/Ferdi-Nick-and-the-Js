@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestTutorial.unity
     guid: e63b5202bdab8a54e9b32242bb5de8dc
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: c036cc66856017c43b52ab8cba24269e
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f9485f6dac5e4b446b3cfcf99e22f6ab,
       type: 2}
