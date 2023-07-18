@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Arrow : XRGrabInteractable
+public class ArrowDeprecated : XRGrabInteractable
 {
     [SerializeField] private float speed = 2000.0f;
 

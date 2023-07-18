@@ -5,7 +5,7 @@ public class Target : MonoBehaviour, IArrowHittable
     public float forceAmount = 1.0f;
     public Material otherMaterial = null;
 
-    public void Hit(Arrow arrow)
+    public void Hit(ArrowDeprecated arrow)
     {
         ApplyMaterial();
         ApplyForce(arrow);
@@ -18,13 +18,13 @@ public class Target : MonoBehaviour, IArrowHittable
             meshRenderer.material = otherMaterial;
     }
 
-    private void ApplyForce(Arrow arrow)
+    private void ApplyForce(ArrowDeprecated arrow)
     {
         if (TryGetComponent(out Rigidbody rigidbody))
             rigidbody.AddForce(arrow.transform.forward * forceAmount);
     }
 
-    private void DisableCollider(Arrow arrow)
+    private void DisableCollider(ArrowDeprecated arrow)
     {
         if (arrow.TryGetComponent(out Collider collider))
             collider.enabled = false;
