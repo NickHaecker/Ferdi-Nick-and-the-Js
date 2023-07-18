@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1810272191929690442}
   - component: {fileID: 1810272191929690441}
   - component: {fileID: 1810272191929690440}
+  - component: {fileID: 7460857135854056680}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -119,10 +120,10 @@ MonoBehaviour:
   m_IsTrackedAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 885ff075-bf41-463b-9f4b-2ad4f6c2103b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -222,10 +223,10 @@ MonoBehaviour:
   m_UIScrollAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 
+      m_Id: 07b6d27d-c9a8-4217-ab8b-510df97e640e
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -395,6 +396,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7460857135854056680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810272191929690452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f3b62d02934f34586bddd60c5fc253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810272192547335382
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +420,7 @@ GameObject:
   - component: {fileID: 1810272192547335380}
   - component: {fileID: 1810272192547335371}
   - component: {fileID: 1810272192547335370}
+  - component: {fileID: 5913455019460335999}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -480,10 +494,10 @@ MonoBehaviour:
   m_IsTrackedAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 491e0cc1-281b-4e48-b44e-2247869844b5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -583,10 +597,10 @@ MonoBehaviour:
   m_UIScrollAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 
+      m_Id: 7a9d2590-c273-4b9c-9e76-20771f4d5b15
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -756,6 +770,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5913455019460335999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810272192547335382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f3b62d02934f34586bddd60c5fc253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810272192916594221
 GameObject:
   m_ObjectHideFlags: 0
