@@ -6,8 +6,7 @@ public class Furnance : MonoBehaviour
 {
     public float CoalLeft = 0;
     public bool FurnanceOn = false;
-
-
+    public MeshRenderer Coal;
 
     // Update is called once per frame
     void Update()
@@ -28,8 +27,14 @@ public class Furnance : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        CoalLeft += 10;
-        FurnanceOn = true;
+        if (Coal.enabled)
+        {
+            if (CoalLeft <= 50)
+            {
+                CoalLeft += 10;
+                FurnanceOn = true;
+            }
+        }
     }
     void updateTimer(float currentTime)
     {
