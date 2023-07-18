@@ -17,6 +17,10 @@ public class Elevator : MonoBehaviour
     private MiniGameController _gameController;
     [SerializeField]
     private LevelData _levelData;
+    [SerializeField]
+    private List<Reward> _rewards = new List<Reward>();
+    [SerializeField]
+    private List<GameObject> _rewardItems = new List<GameObject>();
 
     public Action InitGame;
     public Action RestartGame;
@@ -43,18 +47,11 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         InitGame?.Invoke();
 
         StartCoroutine(StartTutorial());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator StartTutorial()
@@ -83,8 +80,6 @@ public class Elevator : MonoBehaviour
         CloseScene += miniGameController.OnCloseScene;
 
         _gameController = miniGameController;
-
-        //StartScene?.Invoke();
     }
 
     public void RemoveMinigameController(MiniGameController miniGameController)
@@ -92,15 +87,13 @@ public class Elevator : MonoBehaviour
         BeforeCloseScene?.Invoke();
 
         StartScene -= miniGameController.OnStartScene;
-
-        //CloseScene?.Invoke();
-
-
     }
 
     private void OnCloseScene()
     {
         CloseScene -= _gameController.OnCloseScene;
+
+        _gameController.RemoveListener();
 
         _gameController = null;
 
@@ -130,8 +123,31 @@ public class Elevator : MonoBehaviour
 
     }
 
+    public void TakeReward(Reward reward = null)
+    {
+        if(reward == null)
+        {
+            return;
+        }
+
+        foreach (Reward r in _rewards)
+        {
+            if (r.ID == reward.ID)
+            {
+                foreach (GameObject item in _rewardItems)
+                {
+                    if (r.Item.Equals(item))
+                    {
+                        item.SetActive(true);
+                    }
+                }
+            }
+        }
+    }
+
     IEnumerator SwitchScene()
     {
+        //ToDo: Hier  müssen wir noch definieren wann wir die szene switchen also was dazwischen passiert und wann der Wechsel zum neuen Level stattfindet
         yield return new WaitForSeconds(5f);
 
         if (_levelData.Next != null)

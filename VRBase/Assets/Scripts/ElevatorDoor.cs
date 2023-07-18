@@ -15,14 +15,8 @@ public class ElevatorDoor : MonoBehaviour
     [SerializeField]
     private bool _isOpen = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //_animator.SetBool("IsOpen", false);
-    }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
 
     }
@@ -38,19 +32,13 @@ public class ElevatorDoor : MonoBehaviour
 
     private void OnAfterLoadScene()
     {
-        Debug.Log("ff");
-        //_animator.SetBool("IsOpen", true);
         _animator.SetTrigger("Open");
-    //_animator.tr
     }
 
     private void OnBeforeCloseScene()
     {
-        //_animator.SetBool("IsOpen", false);
         _animator.SetTrigger("Close");
     }
-
-    //public void AfterDoor
 
     public bool IsOpen()
     {

@@ -3,23 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniGameController : MonoBehaviour
+public abstract class MiniGameController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Action StartScene;
     public Action CloseScene;
 
+    [SerializeField]
+    private Reward _reward = null;
+
     void Start()
     {
-        Debug.Log("dddd");
         Elevator.Instance.TakeMinigameController(this);
 
         StartScene += OnSceneStarter;
+        CloseScene += OnSceneCloser;
+
+        OnStart();
     }
 
-    private void OnSceneStarter()
+    protected abstract void OnStart();
+    protected abstract void OnStop();
+
+    protected virtual void OnSceneStarter()
     {
         StartCoroutine(End());
+    }
+    protected virtual void OnSceneCloser()
+    {
+
     }
 
     public void OnStartScene()
@@ -32,21 +43,37 @@ public class MiniGameController : MonoBehaviour
         CloseScene?.Invoke();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        OnUpdate();
     }
+
+    public void PassReward()
+    {
+        Elevator.Instance.TakeReward(_reward);
+    }
+
+    protected abstract void OnUpdate();
 
     IEnumerator End()
     {
         yield return new WaitForSeconds(2f);
+
+        PassReward();
 
         EndScene();
     }
 
     private void EndScene()
     {
+        
+
         Elevator.Instance.RemoveMinigameController(this);
+    }
+    public void RemoveListener()
+    {
+        StartScene -= OnSceneStarter;
+        CloseScene -= OnSceneCloser;
     }
 }
