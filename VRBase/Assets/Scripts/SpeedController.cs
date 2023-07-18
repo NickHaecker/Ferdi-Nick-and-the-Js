@@ -20,11 +20,12 @@ public class SpeedController : MonoBehaviour
         if (throttle.throttle !=0)
         {
             GetComponent<Animator>().enabled = true;
+            GetComponent<Animator>().speed = throttle.throttle;
         }
         else
         {
             GetComponent<Animator>().enabled = false;
         }
-        GetComponent<Animator>().speed = throttle.throttle;
+        
     }
 }
