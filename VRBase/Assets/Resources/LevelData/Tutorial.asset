@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   Next: {fileID: 11400000, guid: 84c145bc4aac3974ba5ec981c1011d0e, type: 2}
-  Name: TestTutorial
+  Name: Tutorial

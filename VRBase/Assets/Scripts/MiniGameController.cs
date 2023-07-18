@@ -63,7 +63,7 @@ public abstract class MiniGameController : MonoBehaviour
         EndScene();
     }
 
-    private void EndScene()
+    protected void EndScene()
     {
         Elevator.Instance.RemoveMinigameController(this);
     }

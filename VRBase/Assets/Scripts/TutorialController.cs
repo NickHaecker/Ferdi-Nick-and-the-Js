@@ -1,33 +1,76 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TutorialController : MiniGameController
 {
+    public Action Reset;
+
+    [SerializeField]
+    private BowlingBall _bowlingBall;
+    [SerializeField]
+    private bool _isHolding = false;
+
+
     protected override void OnStart()
     {
-        throw new System.NotImplementedException();
+        _bowlingBall.TakeMinigameController(this);
+        XRGrabInteractable xRGrabInteractable = _bowlingBall.gameObject.GetComponent<XRGrabInteractable>();
+
+        xRGrabInteractable.interactionManager = Player.Instance.GetInteractionManager();
+
+        xRGrabInteractable.selectExited.AddListener(OnSelectExited);
+        xRGrabInteractable.selectEntered.AddListener(OnSelectEntered);
+    }
+
+    private void OnSelectEntered(SelectEnterEventArgs arg0)
+    {
+        _isHolding = true;
+    }
+
+    protected override void OnSceneCloser()
+    {
+        //base.OnSceneCloser();
+    }
+    protected override void OnSceneStarter()
+    {
+        //base.OnSceneStarter();
+        //ToDo: hier vl dann den Dialog starten lassen
+    }
+
+    private void OnSelectExited(SelectExitEventArgs arg0)
+    {
+        _isHolding = false;
+
+        StopAllCoroutines();
+
+        //if()
+
+        StartCoroutine(OnReset());
+    }
+
+    IEnumerator OnReset()
+    {
+        yield return new WaitForSeconds(10f);
+
+        if (!_isHolding)
+        {
+            Reset?.Invoke();
+        }
     }
 
     protected override void OnStop()
     {
-        throw new System.NotImplementedException();
     }
 
     protected override void OnUpdate()
     {
-        throw new System.NotImplementedException();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnHitCallback()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EndScene();
     }
 }
