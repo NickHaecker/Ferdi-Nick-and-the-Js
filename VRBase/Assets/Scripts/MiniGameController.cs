@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class MiniGameController : MonoBehaviour
@@ -65,6 +66,8 @@ public abstract class MiniGameController : MonoBehaviour
 
     protected void EndScene()
     {
+        OnStop();
+
         Elevator.Instance.RemoveMinigameController(this);
     }
     public void RemoveListener()
