@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PartyController : MiniGameController
 {
@@ -16,6 +17,8 @@ public class PartyController : MiniGameController
     private ObjectMover _objectMover;
     [SerializeField]
     private float _offset = 2f;
+    [SerializeField]
+    private GameObject _trophy;
 
     protected override void OnSceneCloser()
     {
@@ -51,6 +54,10 @@ public class PartyController : MiniGameController
 
     protected override void OnStart()
     {
+        XRGrabInteractable xRGrabInteractable = _trophy.GetComponent<XRGrabInteractable>();
+
+        xRGrabInteractable.interactionManager = Player.Instance.GetInteractionManager();
+
         Player.Instance.AddListener(OnHandHitListener);
 
         foreach (DanceHitBox obj in _hits)
