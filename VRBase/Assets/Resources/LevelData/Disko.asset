@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415a1035b77b1f34ab9f16afb04bd5d5, type: 3}
   m_Name: Disko
   m_EditorClassIdentifier: 
-  Next: {fileID: 0}
+  Next: {fileID: 11400000, guid: ddeb4e3ced570dd43a753794a8af4120, type: 2}
   Name: Party
