@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class Bow : XRGrabInteractable
-{
+{ // still not working
     private bool isGrabbed = false;
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -11,7 +11,7 @@ public class Bow : XRGrabInteractable
         {
             base.OnSelectEntered(args);
             isGrabbed = true;
-            Debug.Log("Bow grabbed");
+            //Debug.Log("Bow grabbed"); (works)
         }
     }
 
@@ -19,6 +19,6 @@ public class Bow : XRGrabInteractable
     {
         base.OnSelectExited(args);
         isGrabbed = false;
-        Debug.Log("Bow released");
+        //Debug.Log("Bow released");
     }
 }

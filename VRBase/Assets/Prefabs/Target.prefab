@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6600478839525263880}
   - component: {fileID: 4495737450640129749}
   - component: {fileID: 2550608353765932357}
+  - component: {fileID: 5350420821703024832}
   m_Layer: 0
   m_Name: Ring2
   m_TagString: Untagged
@@ -99,13 +100,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1907608370310603259, guid: f289e379a7f38bf488903d19ab3d4703, type: 3}
+--- !u!114 &5350420821703024832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571548006228416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c3ddd26cb0544eb317bcd621a210f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ring: 2
 --- !u!1 &1695979679496942775
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +132,7 @@ GameObject:
   - component: {fileID: 5749592689588816050}
   - component: {fileID: 5624508242134045122}
   - component: {fileID: 8332225431260334995}
+  - component: {fileID: 8445878656977700814}
   m_Layer: 0
   m_Name: Ring1
   m_TagString: Untagged
@@ -205,13 +220,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7536622687930795020, guid: f289e379a7f38bf488903d19ab3d4703, type: 3}
+--- !u!114 &8445878656977700814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695979679496942775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c3ddd26cb0544eb317bcd621a210f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ring: 1
 --- !u!1 &5322118160263161007
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +252,7 @@ GameObject:
   - component: {fileID: 3074201344325944114}
   - component: {fileID: 8735079302223506086}
   - component: {fileID: 7619820820926282986}
+  - component: {fileID: 7482691731681258687}
   m_Layer: 0
   m_Name: Ring3
   m_TagString: Untagged
@@ -311,13 +340,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5345760584941703707, guid: f289e379a7f38bf488903d19ab3d4703, type: 3}
+--- !u!114 &7482691731681258687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322118160263161007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c3ddd26cb0544eb317bcd621a210f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ring: 3
 --- !u!1 &5430148744444361406
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +436,7 @@ GameObject:
   - component: {fileID: 964348984883028297}
   - component: {fileID: 1785666276967989238}
   - component: {fileID: 6103593212508320611}
+  - component: {fileID: 7532526100874261797}
   m_Layer: 0
   m_Name: Ring4
   m_TagString: Untagged
@@ -481,13 +524,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5287425419667122880, guid: f289e379a7f38bf488903d19ab3d4703, type: 3}
+--- !u!114 &7532526100874261797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522494262559468433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c3ddd26cb0544eb317bcd621a210f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ring: 4
 --- !u!1 &8803691683945994550
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +556,7 @@ GameObject:
   - component: {fileID: 1383287857832755771}
   - component: {fileID: 4170193996180186716}
   - component: {fileID: 7902450464386419161}
+  - component: {fileID: 4475154829667060275}
   m_Layer: 0
   m_Name: Ring5
   m_TagString: Untagged
@@ -587,10 +644,23 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -614873171625502810, guid: f289e379a7f38bf488903d19ab3d4703, type: 3}
+--- !u!114 &4475154829667060275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8803691683945994550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2c3ddd26cb0544eb317bcd621a210f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ring: 5
