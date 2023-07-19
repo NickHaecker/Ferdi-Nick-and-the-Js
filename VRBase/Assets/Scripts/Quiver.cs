@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/* using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Quiver : XRBaseInteractable
@@ -14,14 +14,15 @@ public class Quiver : XRBaseInteractable
     private void CreateAndSelectArrow(SelectEnterEventArgs args)
     {
         // Create arrow, force into interacting hand
-        Arrow arrow = CreateArrow(args.interactorObject.transform);
+        ArrowDeprecated arrow = CreateArrow(args.interactorObject.transform);
         interactionManager.SelectEnter(args.interactorObject, arrow);
     }
 
-    private Arrow CreateArrow(Transform orientation)
+    private ArrowDeprecated CreateArrow(Transform orientation)
     {
         // Create arrow, and get arrow component
         GameObject arrowObject = Instantiate(arrowPrefab, orientation.position, orientation.rotation);
-        return arrowObject.GetComponent<Arrow>();
+        return arrowObject.GetComponent<ArrowDeprecated>();
     }
 }
+ */
