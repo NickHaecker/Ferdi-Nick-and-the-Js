@@ -17,13 +17,10 @@ public class BowlingBall : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
-
-    //IEnumerator
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -33,11 +30,6 @@ public class BowlingBall : MonoBehaviour
         }
         if (collision.gameObject.TryGetComponent<Pin>(out Pin pin))
         {
-            Debug.Log("hit");
-            //_hit= true;
-
-            //_hitCallback();
-
             StartCoroutine(PassCallback());
         }
     }
