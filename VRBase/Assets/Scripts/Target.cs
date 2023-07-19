@@ -5,26 +5,36 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public int ring;
-    
+
+    public Color particleColor;
+    public ParticleSystem particleSystem;
+
+    void Start()
+    {
+        particleSystem = transform.parent.gameObject.transform.parent.gameObject.GetComponent<ParticleSystem>();
+    }
     public void Hit()
     {
         switch (ring)
         {
             case 1:
-                Debug.Log("1");
+                particleColor = Color.yellow;
                 break;
-            case 2: 
-                Debug.Log("2");
+            case 2:
+                particleColor = Color.red;
                 break;
             case 3:
-                Debug.Log("3");
+                particleColor = Color.blue;
                 break;
             case 4:
-                Debug.Log("4");
+                particleColor = Color.black;
                 break;
             case 5:
-                Debug.Log("5");
+                particleColor = Color.white;
                 break;
         }
+        particleSystem.startColor = particleColor;
+        particleSystem.Play();
+        Destroy(transform.parent.gameObject);
     }
 }

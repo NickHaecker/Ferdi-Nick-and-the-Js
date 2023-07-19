@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.autodesk.fbx": {
+      "version": "4.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.htc.upm.wave.openxr": {
       "version": "1.0.5",
       "depth": 0,
