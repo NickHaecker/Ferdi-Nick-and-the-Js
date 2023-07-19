@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/* using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -86,3 +86,4 @@ public class ArrowDeprecated : XRGrabInteractable
         return base.IsSelectableBy(interactor) && !launched;
     }
 }
+ */

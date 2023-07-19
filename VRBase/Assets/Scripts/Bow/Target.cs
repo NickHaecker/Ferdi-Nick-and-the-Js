@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/* using UnityEngine;
 
 public class Target : MonoBehaviour, IArrowHittable
 {
@@ -30,3 +30,4 @@ public class Target : MonoBehaviour, IArrowHittable
             collider.enabled = false;
     }
 }
+ */

@@ -1,4 +1,5 @@
-﻿public interface IArrowHittable
+﻿/* public interface IArrowHittable
 {
     void Hit(ArrowDeprecated arrow);
 }
+ */

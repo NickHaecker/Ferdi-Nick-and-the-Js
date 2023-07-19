@@ -7,7 +7,7 @@ public class ArrowSpawner : MonoBehaviour
 {
     public GameObject arrow;
     public GameObject notch;
-    private XRGrabInteractable _bow;
+    public XRGrabInteractable _bow;
     private bool _arrowNotched = false;
     private GameObject _currentArrow = null;
     void Start()

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+/* using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Notch : XRSocketInteractor
@@ -6,9 +6,6 @@ public class Notch : XRSocketInteractor
     [SerializeField, Range(0, 1)] private float releaseThreshold = 0.25f;
 
     public Bow Bow { get; private set; }
-    public PullMeasurer PullMeasurer;
-
-    public bool CanRelease => PullMeasurer.PullAmount > releaseThreshold;
 
     protected override void Awake()
     {
@@ -70,3 +67,4 @@ public class Notch : XRSocketInteractor
         return false;
     }
 }
+ */
