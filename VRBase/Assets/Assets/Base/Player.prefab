@@ -1540,6 +1540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionManager: {fileID: 1810272193455632249}
+  _hands:
+  - {fileID: 7460857135854056680}
+  - {fileID: 5913455019460335999}
 --- !u!1001 &1810272191948746224
 PrefabInstance:
   m_ObjectHideFlags: 0

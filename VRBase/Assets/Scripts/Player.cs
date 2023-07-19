@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private List<Hand> _hands = new List<Hand>();
 
-    // Start is called before the first frame update
+
     void Start()
     {
         _instance = this;
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     public XRInteractionManager GetInteractionManager() { return _interactionManager; }
 
-    // Update is called once per frame
+
     void Update()
     {
 

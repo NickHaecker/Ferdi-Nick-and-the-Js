@@ -19,7 +19,7 @@ public class Hand : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<Hitable>(out Hitable hitable))
+        if (other.gameObject.TryGetComponent<Hitable>(out Hitable hitable))
         {
             Hit?.Invoke(hitable);
         }

@@ -19,7 +19,6 @@ public class PartyController : MiniGameController
 
     protected override void OnSceneCloser()
     {
-        //base.OnSceneCloser();
         Player.Instance.DeactivateHands();
     }
     protected override void OnSceneStarter()
@@ -35,6 +34,8 @@ public class PartyController : MiniGameController
         if (_hitboxes.Count == 0)
         {
             StopAllCoroutines();
+
+            FinishMinigame();
 
             yield break;
         }
@@ -71,6 +72,18 @@ public class PartyController : MiniGameController
     protected override void OnUpdate()
     {
 
+    }
+
+    private void FinishMinigame()
+    {
+        StartCoroutine(EndOffset());
+    }
+
+    IEnumerator EndOffset()
+    {
+        yield return new WaitForSeconds(60f);
+
+        EndScene();
     }
 
     private void OnHandHitListener(Hitable hitable)
