@@ -55,6 +55,10 @@ public class Arrow : MonoBehaviour
         if (Physics.Linecast(_lastPosition, tip.position, out RaycastHit hitInfo))
         {
             if (hitInfo.transform.gameObject.TryGetComponent<ArrowSpawner>(out ArrowSpawner component)) return;
+            if (hitInfo.transform.TryGetComponent<Target>(out Target targetHit))
+            {
+                targetHit.Hit();
+            }
             if (hitInfo.transform.TryGetComponent(out Rigidbody body))
             {
                 _rigidBody.interpolation = RigidbodyInterpolation.None;

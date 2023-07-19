@@ -5,7 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public int ring;
-    void Hit()
+    public void Hit()
     {
         switch (ring)
         {
