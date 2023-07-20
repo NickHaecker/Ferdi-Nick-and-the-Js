@@ -1,28 +1,38 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class MiniGameController : MonoBehaviour
 {
     public Action StartScene;
     public Action CloseScene;
+    public Action AfterCloseScene;
 
     [SerializeField]
     private Reward _reward = null;
+    [SerializeField]
+    private Material _skybox = null;
 
     void Start()
     {
         Elevator.Instance.TakeMinigameController(this);
 
+        SkyboxController.Instance.ChangeSkybox(_skybox);
+
         StartScene += OnSceneStarter;
         CloseScene += OnSceneCloser;
+        AfterCloseScene += OnAfterCloseScene;
+
 
         OnStart();
     }
 
     protected abstract void OnStart();
     protected abstract void OnStop();
+
+    protected virtual void OnAfterCloseScene() { }
 
     protected virtual void OnSceneStarter()
     {
@@ -65,11 +75,16 @@ public abstract class MiniGameController : MonoBehaviour
 
     protected void EndScene()
     {
+        OnStop();
+
         Elevator.Instance.RemoveMinigameController(this);
     }
     public void RemoveListener()
     {
         PassReward();
+
+        AfterCloseScene?.Invoke();
+        AfterCloseScene -= OnAfterCloseScene;
 
         StartScene -= OnSceneStarter;
         CloseScene -= OnSceneCloser;
