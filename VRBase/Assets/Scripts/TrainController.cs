@@ -30,4 +30,14 @@ public class TrainController : MiniGameController
     {
         //base.OnSceneStarter();
     }
+
+    public void ValidateEnd()
+    {
+        StartCoroutine(End()); 
+    }
+    IEnumerator End()
+    {
+        yield return new WaitForSeconds(5f);
+        EndScene();
+    }
 }
