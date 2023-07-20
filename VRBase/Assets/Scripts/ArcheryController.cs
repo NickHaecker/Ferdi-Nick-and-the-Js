@@ -32,7 +32,7 @@ public class ArcheryController : MiniGameController
 
     IEnumerator End()
     {
-        yield return new WaitForSeconds(200f);
+        yield return new WaitForSeconds(1f);
         EndScene(); //unloads scene
     }
 
@@ -73,6 +73,7 @@ public class ArcheryController : MiniGameController
         }
         Debug.Log("EnemiesShot");
         questTwoCompleted = true;
+        StartCoroutine(End());
         // narrator "you saved the city!" & happy villagers
         // wait for couple seconds
         // EndScene(); //unloads scene
