@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57427095115460666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3212}
+  m_LocalPosition: {x: 0, y: 0, z: 0.323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1586875258638915914}
   - component: {fileID: 8481061840067104545}
   - component: {fileID: 6888817731607056903}
-  - component: {fileID: 6262551965358360842}
+  - component: {fileID: 1551232479657893228}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -97,7 +97,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6262551965358360842
+--- !u!65 &1551232479657893228
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.01, z: 0.69}
+  m_Size: {x: 0.03, y: 0.03, z: 0.69}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6654710719413356637
 GameObject:

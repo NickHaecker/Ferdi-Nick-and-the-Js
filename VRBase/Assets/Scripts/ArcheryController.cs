@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class ArcheryController : MiniGameController
 {
+    public GameObject standees;
+    public GameObject villagers;
     public float targetsShot = 0;
-    private bool questOneDone = false;
+    public float standeesShot = 0;
+    private bool questOneCompleted = false;
+    private bool questTwoCompleted = false;
     protected override void OnStart()
     {
         // narrator "you are in a medieval town, shoot some targets" & Villagers idle
@@ -24,25 +28,21 @@ public class ArcheryController : MiniGameController
     protected override void OnSceneStarter() //after elevetor opened
     {
         //base.OnSceneStarter();
-
-
-
     }
 
     IEnumerator End()
     {
         yield return new WaitForSeconds(200f);
-
         EndScene(); //unloads scene
     }
 
     protected override void OnUpdate()
     {
-        if (targetsShot == 5 && !questOneDone)
+        if (targetsShot >= 4 && !questOneCompleted)
         {
             TargetsShot();
         }
-        if (targetsShot == 8 && questOneDone)
+        if (standeesShot >= standees.transform.childCount && questOneCompleted && !questTwoCompleted)
         {
             EnemiesShot();
         }
@@ -50,19 +50,33 @@ public class ArcheryController : MiniGameController
 
     private void TargetsShot()
     {
-        questOneDone = true;
+        Debug.Log("TargetsShot");
+        standees.SetActive(true);
+        for (int i = 0; i < standees.transform.childCount; i++)
+        {
+            standees.transform.GetChild(i).gameObject.GetComponent<StandeeMovement>().StartMovement();
+        }
+        for (int i = 0; i < villagers.transform.childCount; i++)
+        {
+            villagers.transform.GetChild(i).gameObject.GetComponent<Animator>().SetTrigger("terrified");
+        }
+        questOneCompleted = true;
         // narrator "you are a good archer, lets go" 
         // wait for couple seconds
         // narrator "someones attacking! & Spawn Enemies & scared villagers
     }
     private void EnemiesShot()
     {
+        for (int i = 0; i < villagers.transform.childCount; i++)
+        {
+            villagers.transform.GetChild(i).gameObject.GetComponent<Animator>().SetTrigger("cheer");
+        }
+        Debug.Log("EnemiesShot");
+        questTwoCompleted = true;
         // narrator "you saved the city!" & happy villagers
         // wait for couple seconds
         // EndScene(); //unloads scene
     }
-
-
 
     /* Scene flow: 
     1. Elevator opens
@@ -71,12 +85,5 @@ public class ArcheryController : MiniGameController
     4. Narrator: "SOMEONE IS ATTACKING THE VILLAGE! DEFEND IT!" & Villagers Scared Animtion & Enemies enter scene
     5. IF: Player shoots 3 enemies: Narrator: "You saved the city!" & Villagers Happy Animation
     6. Elevator closes
-    
-    
-    
-    
-    
-    
-    
     */
 }

@@ -9,6 +9,7 @@ public class Arrow : MonoBehaviour
     private Rigidbody _rigidBody;
     private bool _inAir = false;
     private Vector3 _lastPosition = Vector3.zero;
+    private bool hasHit = false;
 
     private void Awake()
     {
@@ -78,7 +79,11 @@ public class Arrow : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Target>(out Target target))
         {
-            target.Hit();
+            if (!hasHit)
+            {
+                hasHit = true;
+                target.Hit();
+            }
         }
     }
 }
