@@ -20,7 +20,7 @@ public class FuelGage : MonoBehaviour
         needleTransform = this.transform;
 
         fuel = 0f;
-        fuelMax = 50f;
+        fuelMax = 40f;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class FuelGage : MonoBehaviour
         fuel = furnance.CoalLeft;
         if (fuel > fuelMax) fuel = fuelMax;
 
-        needleTransform.eulerAngles = new Vector3(0, GetFuelRotation(), 0);
+        needleTransform.eulerAngles = new Vector3(0, 0, -GetFuelRotation());
     }
 
     private float GetFuelRotation()

@@ -5,34 +5,31 @@ using UnityEngine;
 public class Furnance : MonoBehaviour
 {
     public float CoalLeft = 0;
-    public bool FurnanceOn = false;
     public MeshRenderer Coal;
 
     // Update is called once per frame
     void Update()
     {
-        if (FurnanceOn)
-        {
+
             if (CoalLeft > 0)
             {
+                if(this.GetComponentInChildren<ParticleSystem>().isStopped) this.GetComponentInChildren<ParticleSystem>().Play();
                 CoalLeft -= Time.deltaTime;
-            
             }
             else
             {
                 CoalLeft = 0;
-                FurnanceOn = false;
+                this.GetComponentInChildren<ParticleSystem>().Stop();
             }
-        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
         if (Coal.enabled)
         {
-            if (CoalLeft <= 50)
+            if (CoalLeft <= 40)
             {
                 CoalLeft += 10;
-                FurnanceOn = true;
             }
         }
     }

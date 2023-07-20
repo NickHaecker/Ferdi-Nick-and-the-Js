@@ -18,7 +18,7 @@ public class SpeedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (furnance.FurnanceOn)
+        if (furnance.CoalLeft>0)
         {
             if (throttle.throttle != 0)
             {

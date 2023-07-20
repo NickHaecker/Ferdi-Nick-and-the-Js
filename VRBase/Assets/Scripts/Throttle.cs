@@ -10,7 +10,7 @@ public class Throttle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        throttle = (handle.transform.localPosition.z -1.011f) * 2.5f;
+        throttle = (handle.transform.localPosition.y -0.94501f) * (1f/(1.26501f- 0.94501f));
         throttle = Mathf.Clamp(throttle, 0, 1);
     }
 }
