@@ -27,15 +27,13 @@ public class Flyable : MonoBehaviour
     public void PrepareOrbit()
     {
         _body.useGravity = false;
-        //_body.drag = _linearDrag;
-        _body.angularVelocity = new Vector3(0,2,0);
+        _body.angularVelocity = new Vector3(0.45f, 2, 1.1f);
     }
 
     public void Orbit()
     {
         _isInOrbit = true;
         ApplyGravity();
-        //ApplyRandomForce();
     }
 
     public void Ground()
@@ -50,15 +48,11 @@ public class Flyable : MonoBehaviour
         {
             return;
         }
-        //ApplyGravity();
     }
 
     private void ApplyGravity()
     {
-        //Vector3 gravityVector = transform.position.normalized * _gravity;
-        //_body.AddForce(gravityVector, ForceMode.Acceleration);
-        _body.AddForce(new Vector3(1,1,1) * _floatForce, ForceMode.Force);
-        //_body.velocity()
+        _body.AddForce(new Vector3(1, 1, 1) * _floatForce, ForceMode.Force);
     }
 
     private void ApplyRandomForce()
@@ -74,7 +68,6 @@ public class Flyable : MonoBehaviour
         {
             return;
         }
-        //ApplyRandomForce();
 
         Vector3 reflection = Vector3.Reflect(_body.velocity, collision.contacts[0].normal);
         _body.velocity = reflection;

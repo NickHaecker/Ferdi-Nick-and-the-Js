@@ -19,7 +19,6 @@ public class SkyboxController : MonoBehaviour
         }
         else
         {
-
             RenderSettings.skybox = skybox;
         }
     }

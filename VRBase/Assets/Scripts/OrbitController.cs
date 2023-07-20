@@ -11,7 +11,7 @@ public class OrbitController : MiniGameController
 
     protected override void OnStop()
     {
-        GravityController.Instance.ExitOrbit();
+        
     }
 
     protected override void OnUpdate()
@@ -20,16 +20,18 @@ public class OrbitController : MiniGameController
     }
     protected override void OnSceneCloser()
     {
-        //base.OnSceneCloser();
-        //GravityController.Instance.ExitOrbit();
+
     }
     protected override void OnSceneStarter()
     {
-        //base.OnSceneStarter();
-
         StartCoroutine(End());
+    }
 
+    protected override void OnAfterCloseScene()
+    {
+        base.OnAfterCloseScene();
 
+        GravityController.Instance.ExitOrbit();
     }
 
     IEnumerator End()
