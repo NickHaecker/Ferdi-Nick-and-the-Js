@@ -414,7 +414,7 @@ MonoBehaviour:
   - {fileID: 4661004701024219496}
   - {fileID: -4641473909396470698}
   - {fileID: -4171733552520009760}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &-3305408308665059986
 MonoBehaviour:
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9ba5ccf170d54478c5df33f98aabc5, type: 3}
   m_Name: VIVEFocus3Profile Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: VIVE Focus 3 Controller Interaction
   version: 1.0.0
   featureIdInternal: vive.wave.openxr.feature.focus3controller
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03242486774e40c4683edc65026f5c89, type: 3}
   m_Name: VIVEFocus3Feature Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: VIVE XR Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.vivefocus3
@@ -940,7 +940,7 @@ MonoBehaviour:
   - {fileID: 7411168084898056122}
   - {fileID: 4227357449766200477}
   - {fileID: -5454283836664214404}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &7403551584429142837
 MonoBehaviour:
