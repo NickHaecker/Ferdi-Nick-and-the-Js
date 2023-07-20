@@ -118,6 +118,7 @@ public class Elevator : MonoBehaviour
 
         if (asyncOperation.isDone)
         {
+            SkyboxController.Instance.ChangeSkybox();
             StartCoroutine(SwitchScene());
         }
 

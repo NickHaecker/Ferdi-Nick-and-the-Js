@@ -8,22 +8,31 @@ public abstract class MiniGameController : MonoBehaviour
 {
     public Action StartScene;
     public Action CloseScene;
+    public Action AfterCloseScene;
 
     [SerializeField]
     private Reward _reward = null;
+    [SerializeField]
+    private Material _skybox = null;
 
     void Start()
     {
         Elevator.Instance.TakeMinigameController(this);
 
+        SkyboxController.Instance.ChangeSkybox(_skybox);
+
         StartScene += OnSceneStarter;
         CloseScene += OnSceneCloser;
+        AfterCloseScene += OnAfterCloseScene;
+
 
         OnStart();
     }
 
     protected abstract void OnStart();
     protected abstract void OnStop();
+
+    protected virtual void OnAfterCloseScene() { }
 
     protected virtual void OnSceneStarter()
     {
@@ -73,6 +82,9 @@ public abstract class MiniGameController : MonoBehaviour
     public void RemoveListener()
     {
         PassReward();
+
+        AfterCloseScene?.Invoke();
+        AfterCloseScene -= OnAfterCloseScene;
 
         StartScene -= OnSceneStarter;
         CloseScene -= OnSceneCloser;
