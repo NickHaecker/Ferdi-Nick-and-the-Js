@@ -11,10 +11,14 @@ public abstract class MiniGameController : MonoBehaviour
 
     [SerializeField]
     private Reward _reward = null;
+    [SerializeField]
+    private Material _skybox = null;
 
     void Start()
     {
         Elevator.Instance.TakeMinigameController(this);
+
+        SkyboxController.Instance.ChangeSkybox(_skybox);
 
         StartScene += OnSceneStarter;
         CloseScene += OnSceneCloser;

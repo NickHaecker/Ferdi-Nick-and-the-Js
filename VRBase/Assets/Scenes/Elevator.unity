@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316899996}
   - component: {fileID: 316899995}
+  - component: {fileID: 316899997}
   m_Layer: 0
   m_Name: ----Controller----
   m_TagString: Untagged
@@ -152,7 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315c90ddf06a3084e942be7233a57e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grabableObjects: []
+  _grabableObjects:
+  - {fileID: 779344069}
 --- !u!4 &316899996
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +170,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &316899997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316899994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9250e427fa303a14c8c8e1e36eddb621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skybox: {fileID: 0}
 --- !u!1 &472621327
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +516,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _levelData
       value: 
-      objectReference: {fileID: 11400000, guid: ddeb4e3ced570dd43a753794a8af4120,
+      objectReference: {fileID: 11400000, guid: 4b2e4033e9c72c8488bb86c1af5c86ff,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e623801ac92bcf469567178c03177ec, type: 3}
@@ -545,6 +560,7 @@ MonoBehaviour:
   _linearDrag: 0.1
   _angularDrag: 0.1
   _maxRandomForce: 10
+  _floatForce: 6
   _body: {fileID: 2089055852}
   _isInOrbit: 0
 --- !u!1001 &876153087
