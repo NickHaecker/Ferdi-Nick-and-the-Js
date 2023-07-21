@@ -42,25 +42,11 @@ public class Flyable : MonoBehaviour
         _body.useGravity = true;
     }
 
-    private void Update()
-    {
-        if (!_isInOrbit)
-        {
-            return;
-        }
-    }
-
     private void ApplyGravity()
     {
         _body.AddForce(new Vector3(1, 1, 1) * _floatForce, ForceMode.Force);
     }
 
-    private void ApplyRandomForce()
-    {
-        Vector3 randomForce = new Vector3(Random.Range(-_maxRandomForce, _maxRandomForce), Random.Range(-_maxRandomForce, _maxRandomForce), Random.Range(-_maxRandomForce, _maxRandomForce));
-        _body.AddForce(randomForce, ForceMode.Impulse);
-
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

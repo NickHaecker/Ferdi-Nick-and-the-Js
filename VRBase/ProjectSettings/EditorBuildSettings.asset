@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Party.unity
     guid: d005fceeefcb02645943147202c81512
   - enabled: 1
+    path: Assets/Scenes/ArcheryGameplayTest.unity
+    guid: 2667e62143a81724cb082e13768b012c
+  - enabled: 1
     path: Assets/Scenes/Zug.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
