@@ -804,12 +804,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 78791439}
     - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
@@ -824,7 +834,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Elevator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
@@ -1792,7 +1812,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c9f7e3fdb43d6442a5afe734ea04a56, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

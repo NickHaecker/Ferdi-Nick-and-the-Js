@@ -61,7 +61,8 @@ public class Elevator : MonoBehaviour
 
     IEnumerator StartTutorial()
     {
-        yield return new WaitForSeconds(5f);
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(17f);
 
         string name = _levelData.Name;
 
@@ -131,12 +132,12 @@ public class Elevator : MonoBehaviour
 
     public void TakeReward(Reward reward = null)
     {
-       
+
         if (reward == null)
         {
             return;
         }
- Debug.Log(reward.Item);
+        Debug.Log(reward.Item);
         //foreach (Reward r in _rewards)
         //{
         //    if (r.ID == reward.ID)
@@ -161,7 +162,7 @@ public class Elevator : MonoBehaviour
 
     IEnumerator SwitchScene()
     {
-        //ToDo: Hier  müssen wir noch definieren wann wir die szene switchen also was dazwischen passiert und wann der Wechsel zum neuen Level stattfindet
+        //ToDo: Hier  mï¿½ssen wir noch definieren wann wir die szene switchen also was dazwischen passiert und wann der Wechsel zum neuen Level stattfindet
         yield return new WaitForSeconds(5f);
 
         if (_levelData.Next != null)
