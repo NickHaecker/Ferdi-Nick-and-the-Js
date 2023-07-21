@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class TrainController : MiniGameController
 {
+    private GameObject elevatorSpeaker;
     protected override void OnStart()
     {
         //throw new System.NotImplementedException();
+        elevatorSpeaker = GameObject.Find("ElevatorControllerGameJam");
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Train/TrainIntro");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
+        SecondLine();
     }
 
     protected override void OnStop()
     {
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Train/Ticket");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
         //throw new System.NotImplementedException();
     }
 
@@ -33,11 +40,17 @@ public class TrainController : MiniGameController
 
     public void ValidateEnd()
     {
-        StartCoroutine(End()); 
+        StartCoroutine(End());
     }
     IEnumerator End()
     {
         yield return new WaitForSeconds(5f);
         EndScene();
+    }
+    IEnumerator SecondLine()
+    {
+        yield return new WaitForSeconds(10f);
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Train/Shovel");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
     }
 }

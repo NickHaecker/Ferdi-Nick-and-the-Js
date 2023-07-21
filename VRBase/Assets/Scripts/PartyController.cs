@@ -48,12 +48,14 @@ public class PartyController : MiniGameController
         DanceHitBox danceHitBoxdanceHitBox = _hitboxes.Dequeue();
 
         danceHitBoxdanceHitBox.Activate();
-
+        if (_offset > 0.7) _offset -= 0.1f;
         StartCoroutine(HitBoxLoop());
     }
 
     protected override void OnStart()
     {
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Party/Intro");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
         XRGrabInteractable xRGrabInteractable = _trophy.GetComponent<XRGrabInteractable>();
 
         xRGrabInteractable.interactionManager = Player.Instance.GetInteractionManager();
@@ -83,6 +85,8 @@ public class PartyController : MiniGameController
 
     private void FinishMinigame()
     {
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Party/ThanksForPlaying");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
         StartCoroutine(EndOffset());
     }
 

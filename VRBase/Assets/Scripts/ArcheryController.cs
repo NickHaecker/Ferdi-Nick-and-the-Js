@@ -10,9 +10,13 @@ public class ArcheryController : MiniGameController
     public float standeesShot = 0;
     private bool questOneCompleted = false;
     private bool questTwoCompleted = false;
+    GameObject elevatorSpeaker;
     protected override void OnStart()
     {
         // narrator "you are in a medieval town, shoot some targets" & Villagers idle
+        elevatorSpeaker = GameObject.Find("ElevatorControllerGameJam");
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Archery/ArcheryIntro");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
     }
 
     protected override void OnStop() //of the existance of the scene
@@ -61,6 +65,8 @@ public class ArcheryController : MiniGameController
             villagers.transform.GetChild(i).gameObject.GetComponent<Animator>().SetTrigger("terrified");
         }
         questOneCompleted = true;
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Archery/ArcheryDefend");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
         // narrator "you are a good archer, lets go" 
         // wait for couple seconds
         // narrator "someones attacking! & Spawn Enemies & scared villagers
@@ -73,6 +79,8 @@ public class ArcheryController : MiniGameController
         }
         Debug.Log("EnemiesShot");
         questTwoCompleted = true;
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Archery/ArcheryYay");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
         StartCoroutine(End());
         // narrator "you saved the city!" & happy villagers
         // wait for couple seconds
