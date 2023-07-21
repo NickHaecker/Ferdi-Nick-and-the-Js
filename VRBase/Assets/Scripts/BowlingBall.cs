@@ -30,16 +30,16 @@ public class BowlingBall : MonoBehaviour
         }
         if (collision.gameObject.TryGetComponent<Pin>(out Pin pin))
         {
-            StartCoroutine(PassCallback());
+            _hitCallback();
         }
     }
 
-    IEnumerator PassCallback()
-    {
-        yield return new WaitForSeconds(5f);
+    //IEnumerator PassCallback()
+    //{
+    //    yield return new WaitForSeconds(5f);
 
-        _hitCallback();
-    }
+    //    _hitCallback();
+    //}
 
     public void TakeMinigameController(TutorialController tutorialController)
     {
