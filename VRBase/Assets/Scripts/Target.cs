@@ -50,6 +50,7 @@ public class Target : MonoBehaviour
         {
             if (firstHit)
             {
+                this.GetComponent<AudioSource>().Play();
                 archeryController.standeesShot++;
                 firstHit = false;
                 this.GetComponent<StandeeMovement>().StopAllCoroutines();

@@ -29,6 +29,7 @@ public class Elevator : MonoBehaviour
     public Action StartScene;
     public Action CloseScene;
     public Action BeforeCloseScene;
+    public AudioSource[] audioSources;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class Elevator : MonoBehaviour
         StartScene += OnStartScene;
         CloseScene += OnCloseScene;
         InitGame += OnInitGame;
+        BeforeLoadScene += OnBeforeLoadScene;
     }
 
     private void OnInitGame()
@@ -50,10 +52,14 @@ public class Elevator : MonoBehaviour
     void Start()
     {
         InitGame?.Invoke();
-
+        audioSources = GetComponents<AudioSource>();
 
     }
-
+    public void OnBeforeLoadScene()
+    {
+        audioSources[0].Play();
+        audioSources[2].Stop();
+    }
     public void ValidateStartTutorial()
     {
         StartCoroutine(StartTutorial());
@@ -62,10 +68,9 @@ public class Elevator : MonoBehaviour
     IEnumerator StartTutorial()
     {
         GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
+        audioSources[1].Stop();
         yield return new WaitForSeconds(17f);
-
         string name = _levelData.Name;
-
         LoadScene(name);
     }
 
@@ -124,6 +129,7 @@ public class Elevator : MonoBehaviour
 
         if (asyncOperation.isDone)
         {
+            audioSources[2].Play();
             SkyboxController.Instance.ChangeSkybox();
             StartCoroutine(SwitchScene());
         }

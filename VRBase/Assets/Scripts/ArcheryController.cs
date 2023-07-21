@@ -81,6 +81,7 @@ public class ArcheryController : MiniGameController
         questTwoCompleted = true;
         elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Archery/ArcheryYay");
         elevatorSpeaker.GetComponent<AudioSource>().Play();
+        GameObject.Find("Villagers").GetComponent<AudioSource>().Play();
         StartCoroutine(End());
         // narrator "you saved the city!" & happy villagers
         // wait for couple seconds

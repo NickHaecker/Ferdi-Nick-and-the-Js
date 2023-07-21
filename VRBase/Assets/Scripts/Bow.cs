@@ -7,6 +7,7 @@ public class Bow : XRGrabInteractable
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
+        this.GetComponent<AudioSource>().Play();
         if (!isGrabbed)
         {
             base.OnSelectEntered(args);
