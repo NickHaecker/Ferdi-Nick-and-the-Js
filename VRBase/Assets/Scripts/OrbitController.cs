@@ -7,11 +7,14 @@ public class OrbitController : MiniGameController
     protected override void OnStart()
     {
         GravityController.Instance.EnterOrbit();
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Space/SpaceIntro");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
+        StartCoroutine(SecondLine());
     }
 
     protected override void OnStop()
     {
-        
+
     }
 
     protected override void OnUpdate()
@@ -37,5 +40,11 @@ public class OrbitController : MiniGameController
         yield return new WaitForSeconds(20f);
 
         EndScene();
+    }
+    IEnumerator SecondLine()
+    {
+        yield return new WaitForSeconds(20f);
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Space/BeepBoop");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
     }
 }

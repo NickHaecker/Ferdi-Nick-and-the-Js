@@ -23,6 +23,8 @@ public class TutorialController : MiniGameController
 
         xRGrabInteractable.selectExited.AddListener(OnSelectExited);
         xRGrabInteractable.selectEntered.AddListener(OnSelectEntered);
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Bowling/Instructions");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
     }
 
     private void OnSelectEntered(SelectEnterEventArgs arg0)
