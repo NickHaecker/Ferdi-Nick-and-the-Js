@@ -7306,7 +7306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56100a1dd9a15384cb51ad9cfd717b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reward: {fileID: 0}
+  _reward: {fileID: 11400000, guid: 59239fec6c649b44cae0521e14754773, type: 2}
   _skybox: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
 --- !u!4 &752111367
 Transform:
