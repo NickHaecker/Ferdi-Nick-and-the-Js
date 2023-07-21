@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3111af6e6a789b04d95e06dd0a733280, type: 3}
   m_Name: Ticket
   m_EditorClassIdentifier: 
-  Item: {fileID: 7317929461677941923, guid: 6267659dfe5846944b8c24859edef8aa, type: 3}
+  Item: Ticket
   ID: Ticket

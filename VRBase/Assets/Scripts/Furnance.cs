@@ -11,20 +11,24 @@ public class Furnance : MonoBehaviour
     void Update()
     {
 
-            if (CoalLeft > 0)
-            {
-                if(this.GetComponentInChildren<ParticleSystem>().isStopped) this.GetComponentInChildren<ParticleSystem>().Play();
-                CoalLeft -= Time.deltaTime;
-            }
-            else
-            {
-                CoalLeft = 0;
-                this.GetComponentInChildren<ParticleSystem>().Stop();
-            }
-        
+        if (CoalLeft > 0)
+        {
+            if (this.GetComponentInChildren<ParticleSystem>().isStopped) this.GetComponentInChildren<ParticleSystem>().Play();
+            CoalLeft -= Time.deltaTime;
+        }
+        else
+        {
+            CoalLeft = 0;
+            this.GetComponentInChildren<ParticleSystem>().Stop();
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.TryGetComponent<Shovel>(out Shovel shovel))
+        {
+            Coal = shovel.GetMeshRenderer();
+        }
         if (Coal.enabled)
         {
             if (CoalLeft <= 40)

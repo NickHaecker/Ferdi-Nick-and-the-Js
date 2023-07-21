@@ -8,6 +8,10 @@ public class CoalSpawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Coal.enabled = true;
+        //Coal.enabled = true;
+        if(other.gameObject.TryGetComponent<Shovel>(out Shovel shovel))
+        {
+            shovel.GetMeshRenderer().enabled = true;
+        }
     }
 }

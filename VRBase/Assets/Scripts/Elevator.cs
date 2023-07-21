@@ -51,7 +51,7 @@ public class Elevator : MonoBehaviour
     {
         InitGame?.Invoke();
 
-        
+
     }
 
     public void ValidateStartTutorial()
@@ -131,22 +131,30 @@ public class Elevator : MonoBehaviour
 
     public void TakeReward(Reward reward = null)
     {
-        if(reward == null)
+       
+        if (reward == null)
         {
             return;
         }
-
-        foreach (Reward r in _rewards)
+ Debug.Log(reward.Item);
+        //foreach (Reward r in _rewards)
+        //{
+        //    if (r.ID == reward.ID)
+        //    {
+        //        foreach (GameObject item in _rewardItems)
+        //        {
+        //            if (r.Item == item.name)
+        //            {
+        //                item.SetActive(true);
+        //            }
+        //        }
+        //    }
+        //}
+        foreach (GameObject gameObject in _rewardItems)
         {
-            if (r.ID == reward.ID)
+            if (gameObject.name == reward.Item)
             {
-                foreach (GameObject item in _rewardItems)
-                {
-                    if (r.Item.name == item.name)
-                    {
-                        item.SetActive(true);
-                    }
-                }
+                gameObject.SetActive(true);
             }
         }
     }

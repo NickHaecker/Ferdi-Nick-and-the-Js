@@ -7,8 +7,11 @@ public class CoalDespawn : MonoBehaviour
     public MeshRenderer Coal;
 
     private void OnTriggerEnter(Collider other)
-    {     
-            Coal.enabled = false;
-     
+    {
+        if (other.gameObject.TryGetComponent<Shovel>(out Shovel shovel))
+        {
+            shovel.GetMeshRenderer().enabled = false;
+        }
+
     }
 }
