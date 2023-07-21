@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &78791439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5040196827990865398, guid: 5e623801ac92bcf469567178c03177ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 779344064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed6d261bb66dd74e8677330dae32b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &107558164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1193175299239615819, guid: 52f25cc4e8be594499d0f1443c45b003,
@@ -547,6 +559,31 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4558395712726210842, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395712726210842, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040196827990865398, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
       propertyPath: _levelData
@@ -564,6 +601,46 @@ PrefabInstance:
       propertyPath: _rewardItems.Array.data[0]
       value: 
       objectReference: {fileID: 1030194924}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 78791439}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ValidateStartTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Elevator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162819527822900307, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e623801ac92bcf469567178c03177ec, type: 3}
 --- !u!4 &779344065 stripped
