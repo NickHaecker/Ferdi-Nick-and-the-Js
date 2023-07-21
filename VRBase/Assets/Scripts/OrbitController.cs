@@ -29,14 +29,12 @@ public class OrbitController : MiniGameController
 
     protected override void OnAfterCloseScene()
     {
-        base.OnAfterCloseScene();
-
         GravityController.Instance.ExitOrbit();
     }
 
     IEnumerator End()
     {
-        yield return new WaitForSeconds(40f);
+        yield return new WaitForSeconds(20f);
 
         EndScene();
     }
