@@ -216,6 +216,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skybox: {fileID: 0}
+--- !u!95 &452551909 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7166802977030687495, guid: 5e623801ac92bcf469567178c03177ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 779344064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &472621327
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +899,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040196827990865398, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 452551909}
+    - target: {fileID: 5040196827990865398, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
       propertyPath: _levelData
       value: 
       objectReference: {fileID: 11400000, guid: ddeb4e3ced570dd43a753794a8af4120,
@@ -1005,6 +1016,16 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7166802977030687495, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166802977030687495, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b58f47fc0faebb4e80845bd155cba18, type: 2}
     m_RemovedComponents:
     - {fileID: 4436837180102207301, guid: 5e623801ac92bcf469567178c03177ec, type: 3}
     - {fileID: 5957071390332774944, guid: 5e623801ac92bcf469567178c03177ec, type: 3}
@@ -1172,6 +1193,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd2edb5c9be1433468f15f4966dd106d, type: 2}
   _rewardItems:
   - {fileID: 1856751142}
+  _animator: {fileID: 0}
+  audioSources: []
 --- !u!1 &876153091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4569078880215913445, guid: d90d6ea1365a30049bf0c12bc145e86a,

@@ -21,6 +21,8 @@ public class Elevator : MonoBehaviour
     private List<Reward> _rewards = new List<Reward>();
     [SerializeField]
     private List<GameObject> _rewardItems = new List<GameObject>();
+    [SerializeField]
+    private Animator _animator;
 
     public Action InitGame;
     public Action RestartGame;
@@ -34,7 +36,7 @@ public class Elevator : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-
+        _animator.enabled = false;
         StartScene += OnStartScene;
         CloseScene += OnCloseScene;
         InitGame += OnInitGame;
@@ -53,7 +55,7 @@ public class Elevator : MonoBehaviour
     {
         InitGame?.Invoke();
         audioSources = GetComponents<AudioSource>();
-
+        //StartCoroutine(StartTutorial());
     }
     public void OnBeforeLoadScene()
     {
@@ -107,6 +109,8 @@ public class Elevator : MonoBehaviour
         _gameController.RemoveListener();
 
         _gameController = null;
+
+        _animator.enabled = true;
 
         UnloadScene(_levelData.Name);
     }
@@ -169,11 +173,13 @@ public class Elevator : MonoBehaviour
     IEnumerator SwitchScene()
     {
         //ToDo: Hier  m�ssen wir noch definieren wann wir die szene switchen also was dazwischen passiert und wann der Wechsel zum neuen Level stattfindet
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8f);
 
         if (_levelData.Next != null)
         {
             _levelData = _levelData.Next;
+
+            _animator.enabled = false;
 
             LoadScene(_levelData.Name);
         }
