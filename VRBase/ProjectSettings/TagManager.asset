@@ -16,10 +16,8 @@ TagManager:
   - Arrow
   - Zug
   - GrabIgnore
-  - 
-  - 
-  - 
-  - 
+  - ElevatorBlocker
+  - ImportantInteractables
   - 
   - 
   - 
