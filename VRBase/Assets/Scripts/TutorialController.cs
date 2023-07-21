@@ -12,6 +12,8 @@ public class TutorialController : MiniGameController
     private BowlingBall _bowlingBall;
     [SerializeField]
     private bool _isHolding = false;
+    [SerializeField]
+    private bool _finished = false;
 
 
     protected override void OnStart()
@@ -71,7 +73,16 @@ public class TutorialController : MiniGameController
 
     public void OnHitCallback()
     {
+        if (_finished) return;
+        _finished = true;
         StopAllCoroutines();
+        StartCoroutine(PassCallback());
+    }
+
+    IEnumerator PassCallback()
+    {
+        yield return new WaitForSeconds(time);
+
         EndScene();
     }
 }
