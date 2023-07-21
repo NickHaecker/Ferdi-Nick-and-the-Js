@@ -51,12 +51,17 @@ public class Elevator : MonoBehaviour
     {
         InitGame?.Invoke();
 
+        
+    }
+
+    public void ValidateStartTutorial()
+    {
         StartCoroutine(StartTutorial());
     }
 
     IEnumerator StartTutorial()
     {
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(5f);
 
         string name = _levelData.Name;
 
