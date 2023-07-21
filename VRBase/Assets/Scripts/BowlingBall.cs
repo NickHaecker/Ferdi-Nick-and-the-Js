@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public delegate void HitCallback();
 public class BowlingBall : MonoBehaviour
@@ -14,17 +15,23 @@ public class BowlingBall : MonoBehaviour
     void Start()
     {
         _ballRigidbody = GetComponent<Rigidbody>();
+        XRGrabInteractable xRGrabInteractable = gameObject.GetComponent<XRGrabInteractable>();
+        xRGrabInteractable.selectEntered.AddListener(OnSelectEntered);
 
     }
-
+    private void OnSelectEntered(SelectEnterEventArgs arg0)
+    {
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Bowling/ThrowTheBall");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
+    }
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-       if (_hit)
+        if (_hit)
         {
             return;
         }
@@ -32,6 +39,10 @@ public class BowlingBall : MonoBehaviour
         {
             _hitCallback();
         }
+        /* if ( collision.gameObject.name == "Plane")
+        {
+            
+        } */
     }
 
     //IEnumerator PassCallback()

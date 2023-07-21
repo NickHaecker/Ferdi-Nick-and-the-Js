@@ -78,6 +78,8 @@ public class TutorialController : MiniGameController
         if (_finished) return;
         _finished = true;
         StopAllCoroutines();
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Bowling/BowlingCongrats");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
         StartCoroutine(PassCallback());
     }
 
