@@ -8611,7 +8611,7 @@ GameObject:
   - component: {fileID: 1420015916}
   - component: {fileID: 1420015918}
   - component: {fileID: 1420015917}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
