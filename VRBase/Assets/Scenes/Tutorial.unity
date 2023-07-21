@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9edfe4dc77735a246974a2acbcb0179e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reward: {fileID: 0}
+  _reward: {fileID: 11400000, guid: 56946c429a4d0b540b1d8cf340d768b9, type: 2}
   _skybox: {fileID: 0}
   _bowlingBall: {fileID: 306162165}
   _isHolding: 0
