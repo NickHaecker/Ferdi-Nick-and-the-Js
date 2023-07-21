@@ -527,6 +527,31 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4558395712726210842, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395712726210842, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558395713363704083, guid: 5e623801ac92bcf469567178c03177ec,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040196827990865398, guid: 5e623801ac92bcf469567178c03177ec,
         type: 3}
       propertyPath: _levelData
