@@ -52,5 +52,9 @@ public class TrainController : MiniGameController
         yield return new WaitForSeconds(10f);
         elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Train/Shovel");
         elevatorSpeaker.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(15f);
+        elevatorSpeaker.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Train/SoundEffects/SETrainChoo1");
+        elevatorSpeaker.GetComponent<AudioSource>().Play();
     }
+
 }

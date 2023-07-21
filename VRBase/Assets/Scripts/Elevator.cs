@@ -169,7 +169,7 @@ public class Elevator : MonoBehaviour
     IEnumerator SwitchScene()
     {
         //ToDo: Hier  m�ssen wir noch definieren wann wir die szene switchen also was dazwischen passiert und wann der Wechsel zum neuen Level stattfindet
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
 
         if (_levelData.Next != null)
         {

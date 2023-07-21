@@ -54,7 +54,7 @@ public class PartyController : MiniGameController
 
     protected override void OnStart()
     {
-        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Party/Intro");
+        GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Audio/Party/PartyIntro");
         GameObject.Find("ElevatorControllerGameJam").GetComponent<AudioSource>().Play();
         XRGrabInteractable xRGrabInteractable = _trophy.GetComponent<XRGrabInteractable>();
 
@@ -92,8 +92,9 @@ public class PartyController : MiniGameController
 
     IEnumerator EndOffset()
     {
-        yield return new WaitForSeconds(60f);
-
+        yield return new WaitForSeconds(10f);
+        AudioSource[] audioSources = GameObject.Find("Elevator").GetComponents<AudioSource>();
+        audioSources[1].Play();
         EndScene();
     }
 
