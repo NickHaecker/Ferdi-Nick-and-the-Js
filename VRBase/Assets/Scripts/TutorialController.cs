@@ -71,6 +71,7 @@ public class TutorialController : MiniGameController
 
     public void OnHitCallback()
     {
+        StopAllCoroutines();
         EndScene();
     }
 }
