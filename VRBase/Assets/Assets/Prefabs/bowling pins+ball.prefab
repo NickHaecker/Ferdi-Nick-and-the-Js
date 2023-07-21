@@ -67,5 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bowling pins+ball
       objectReference: {fileID: 0}
+    - target: {fileID: 5066721303361909861, guid: 91d652818d9f20a40816084295438b57,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d652818d9f20a40816084295438b57, type: 3}
