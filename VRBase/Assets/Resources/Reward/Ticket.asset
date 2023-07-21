@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 415a1035b77b1f34ab9f16afb04bd5d5, type: 3}
-  m_Name: Archery
+  m_Script: {fileID: 11500000, guid: 3111af6e6a789b04d95e06dd0a733280, type: 3}
+  m_Name: Ticket
   m_EditorClassIdentifier: 
-  Next: {fileID: 11400000, guid: 4b2e4033e9c72c8488bb86c1af5c86ff, type: 2}
-  Name: ArcheryGameplayTest
+  Item: {fileID: 7317929461677941923, guid: 6267659dfe5846944b8c24859edef8aa, type: 3}
+  ID: Ticket

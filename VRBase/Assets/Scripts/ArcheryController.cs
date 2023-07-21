@@ -32,7 +32,7 @@ public class ArcheryController : MiniGameController
 
     IEnumerator End()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         EndScene(); //unloads scene
     }
 
