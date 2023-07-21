@@ -10,9 +10,10 @@ public class Arrow : MonoBehaviour
     private bool _inAir = false;
     private Vector3 _lastPosition = Vector3.zero;
     private bool hasHit = false;
-
+    private AudioSource[] audioSources;
     private void Awake()
     {
+        audioSources = GetComponents<AudioSource>();
         _rigidBody = GetComponent<Rigidbody>();
         PullInteraction.PullActionReleased += Release;
         Stop();
@@ -32,6 +33,7 @@ public class Arrow : MonoBehaviour
         _rigidBody.AddForce(force, ForceMode.Impulse);
         StartCoroutine(RotateWithVelocity());
         _lastPosition = tip.position;
+        audioSources[1].Play();
     }
     private IEnumerator RotateWithVelocity()
     {
@@ -63,6 +65,7 @@ public class Arrow : MonoBehaviour
                 body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
             }
             Stop();
+
         }
     }
     private void Stop()
@@ -81,6 +84,7 @@ public class Arrow : MonoBehaviour
         {
             if (!hasHit)
             {
+                audioSources[0].Play();
                 hasHit = true;
                 target.Hit();
             }
